@@ -94,7 +94,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'bubblegum'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -277,3 +277,5 @@ set noshowmatch
 
 " Sudo save
 cmap w!! w !sudo tee >/dev/null %
+
+set showcmd
