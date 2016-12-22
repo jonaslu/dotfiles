@@ -19,15 +19,18 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
+    \ 'build' : {
+    \     'windows' : 'tools\\update-dll-mingw',
+    \     'cygwin' : 'make -f make_cygwin.mak',
+    \     'mac' : 'make -f make_mac.mak',
+    \     'unix' : 'make -f make_unix.mak',
+    \    },
+    \ }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Valloric/YouCompleteMe', {
+    \ 'do': './install.py --tern-completer'
+    \ }
 
 "" Color
 Plug 'tomasr/molokai'
@@ -279,3 +282,5 @@ set noshowmatch
 cmap w!! w !sudo tee >/dev/null %
 
 set showcmd
+
+autocmd CompleteDone * pclose
