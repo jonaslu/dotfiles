@@ -258,7 +258,7 @@ nmap <F1> <nop>
 " Load any .vimrc located at the git repos root
 " (to load project related plugins and settings)
 let git_path = system("git rev-parse --show-toplevel 2>/dev/null")
-let git_vimrc = substitute(git_path, '\n', '', '') . "/.vimrc"
+let git_vimrc = substitute(git_path, '\n', '', '') . "/.vimrc.local"
 if !empty(glob(git_vimrc))
     sandbox exec ":source " . git_vimrc
 endif
