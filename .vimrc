@@ -5,6 +5,7 @@ call plug#begin(expand('~/.vim/plugged'))
 
 "" Plug install packages
 Plug 'scrooloose/nerdtree'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
