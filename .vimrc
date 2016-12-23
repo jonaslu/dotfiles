@@ -279,6 +279,6 @@ set noshowmatch
 " Sudo save
 cmap w!! w !sudo tee >/dev/null %
 
+" Shows key-combos in lower right corner because of how I type
 set showcmd
 
-autocmd CompleteDone * pclose
