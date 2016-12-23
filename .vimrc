@@ -196,8 +196,8 @@ noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
 
-"" Close buffer
-noremap <leader>c :bc<CR>
+"" Close window, but not buffer
+noremap <leader>c :q<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
