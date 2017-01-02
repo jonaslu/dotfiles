@@ -283,3 +283,7 @@ cmap w!! w !sudo tee >/dev/null %
 set showcmd
 
 autocmd CompleteDone * pclose
+
+" Next and previous buffer
+noremap <leader>q :bp<CR>
+noremap <leader>w :bn<CR>
