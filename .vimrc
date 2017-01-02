@@ -287,3 +287,6 @@ autocmd CompleteDone * pclose
 " Next and previous buffer
 noremap <leader>q :bp<CR>
 noremap <leader>w :bn<CR>
+
+" White-list ycm filetypes
+let g:ycm_filetype_whitelist = { 'python':1, 'javascript':1, 'sh':1 }
