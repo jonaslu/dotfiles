@@ -289,4 +289,4 @@ noremap <leader>q :bp<CR>
 noremap <leader>w :bn<CR>
 
 " White-list ycm filetypes
-let g:ycm_filetype_whitelist = { 'python':1, 'javascript':1, 'sh':1 }
+let g:ycm_filetype_blacklist = { 'text':1, 'gitcommit':1 }
