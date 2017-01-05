@@ -160,6 +160,9 @@ let g:ctrlp_use_caching = 1
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
+" Open file in new buffer instead of switching to an existing
+let g:ctrlp_switch_buffer = 'et'
+
 " " snippets
 let g:UltiSnipsExpandTrigger="<c-b>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
