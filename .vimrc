@@ -261,7 +261,7 @@ nmap <F1> <nop>
 let git_path = system("git rev-parse --show-toplevel 2>/dev/null")
 let git_vimrc = substitute(git_path, '\n', '', '') . "/.vimrc.local"
 if !empty(glob(git_vimrc))
-    sandbox exec ":source " . git_vimrc
+    exec ":source " . git_vimrc
 endif
 
 " highlight current line
