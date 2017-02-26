@@ -1,0 +1,13 @@
+[user]
+	name = Jonas Lundberg
+	email = jonasl@catchmecode.com
+[alias]
+	s = status
+	co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	cb = checkout -b
+	wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
+	unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
+	powre = !"git wip;git rebase -i origin/master;git unwip"
+[cola]
+	spellcheck = false
