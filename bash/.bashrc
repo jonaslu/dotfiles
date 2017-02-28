@@ -11,7 +11,7 @@ alias cdiff='cdiff -w 0 -s'
 alias rgrep='grep --color=always -r'
 alias vi='vim'
 
-PS1='[\u@\h \W]\$ '
+export PS1="\[\e[34m\]\w\[\e[m\] \[\e[32m\]\t\[\e[m\] \h\n\$ "
 export EDITOR=vim
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 source /usr/share/nvm/init-nvm.sh
