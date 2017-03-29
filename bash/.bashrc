@@ -18,3 +18,6 @@ export EDITOR=vim
 source /usr/share/nvm/init-nvm.sh
 stty -ixon
 eval $(thefuck --alias)
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
