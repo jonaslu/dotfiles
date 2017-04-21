@@ -23,3 +23,7 @@ eval $(thefuck --alias)
 if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
+
+if command -v npm>/dev/null; then
+  source <(npm completion)
+fi
