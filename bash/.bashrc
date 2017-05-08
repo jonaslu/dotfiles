@@ -11,6 +11,7 @@ alias cdiff='cdiff -w 0 -s'
 alias rgrep='grep --color=always -r'
 alias vi='vim'
 alias less='less -R'
+alias use_python2="export PATH=~/bin/python2:${PATH}"
 
 export PS1="\[\e[34m\]\w\[\e[m\] \[\e[32m\]\t\[\e[m\] \h\n\$ "
 export EDITOR=vim
