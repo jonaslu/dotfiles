@@ -12,6 +12,7 @@ alias rgrep='grep --color=always -r'
 alias vi='vim'
 alias less='less -R'
 alias use_python2="export PATH=~/bin/python2:${PATH}"
+alias jsPretty="python -m json.tool"
 
 export PS1="\[\e[34m\]\w\[\e[m\] \[\e[32m\]\t\[\e[m\] \h\n\$ "
 export EDITOR=vim
