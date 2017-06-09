@@ -16,6 +16,10 @@ alias jsPretty="python -m json.tool"
 
 export PS1="\[\e[34m\]\w\[\e[m\] \[\e[32m\]\t\[\e[m\] \h\n\$ "
 export EDITOR=vim
+
+shopt -s histappend
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 source /usr/share/nvm/init-nvm.sh
 stty -ixon
