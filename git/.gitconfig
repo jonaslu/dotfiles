@@ -14,3 +14,5 @@
     tidyup = !git branch --merged HEAD | grep -v \"\\*\" | grep -v master | grep -v develop | xargs -n 1 -I % git branch -d % && git remote prune origin
 [cola]
     spellcheck = false
+[core]
+	excludesfile = /home/jonasl/.global_gitignore
