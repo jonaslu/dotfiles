@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 alias ll='ls -hal --color=auto'
-alias cdiff='cdiff -w 0 -s'
+alias cdiff='ydiff -w 0 -s'
 alias rgrep='grep --color=always -r'
 alias vi='vim'
 alias less='less -R'
