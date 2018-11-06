@@ -7,8 +7,9 @@
 
 alias ls='ls --color=auto'
 alias ll='ls -hal --color=auto'
-alias cdiff='ydiff -w 0 -s'
-alias rgrep='grep --color=always -r'
+alias cdiff='ydiff -w 0 -s --wrap -t 2'
+alias grep='rg'
+alias rgrep='rg'
 alias vi='vim'
 alias less='less -R'
 alias use_python2="export PATH=~/bin/python2:${PATH}"
