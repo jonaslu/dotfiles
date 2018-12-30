@@ -26,7 +26,6 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 source /usr/share/nvm/init-nvm.sh
 stty -ixon
-eval $(thefuck --alias)
 
 [ -f ~/.bashrc_local ] && source ~/.bashrc_local
 if command -v tmux>/dev/null; then
