@@ -19,8 +19,8 @@ DATE=$(date +'%H:%M')
 # Mixer volume | muted
 MASTER_VOLUME=$(amixer get Master | grep "Front Left: " | rg -o "\d\d%")
 
-CPU_USAGE=$(top -b -n 1 | perl -lane '/PID/ and $x=1; $x and print' | awk '{totuse = totuse + $9} END {print totuse}')
+CPU_USAGE=$(top -b -n 1 | perl -lane '/PID/ and $x=1; $x and print' | awk '{totuse = totuse + $9} END {printf("%.2d", totuse)}')
 
-MEMORY_USED=$(free -m | grep Mem: | awk '{ print($2-$7)*100/$2 }')
+MEMORY_USED=$(free -m | grep Mem: | awk '{ printf("%.2d", ($2-$7)*100/$2) }')
 
 echo 🔋$BATTERY_PERCENTAGE $CHARGE_SIGN 🔈$MASTER_VOLUME 🔆$BACKLIGHT_PERCENTAGE% 📶$NETWORK_NAME $LINK_QUALITY_PERCENTAGE% $CPU_USAGE% $MEMORY_USED% $DATE
