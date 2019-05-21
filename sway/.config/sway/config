@@ -214,7 +214,10 @@ bar {
     }
 }
 
-input "*" xkb_layout se
+input "*" {
+  xkb_layout se
+  xkb_options caps:none
+}
 
 input "2:14:ETPS/2_Elantech_Touchpad" {
   tap enabled
