@@ -12,7 +12,7 @@ BACKLIGHT_PERCENTAGE=$(light | awk -F '.' '{print $1 }')
 IWCONFIG=$(iwconfig wlp3s0)
 NETWORK_NAME=$(grep ESSID <<< $IWCONFIG | grep -o '".*' | tr -d '"')
 LINK_QUALITY=($(iwconfig wlp3s0 | grep "Link Quality" | rg -o '(\d{2}/\d{2})' | tr '/' ' '))
-LINK_QUALITY_PERCENTAGE=$(("${LINK_QUALITY[0]}" * 100 / "${LINK_QUALITY[1]}"))
+LINK_QUALITY_PERCENTAGE=$(awk -v link1="${LINK_QUALITY[0]}" -v link2="${LINK_QUALITY[1]}" 'BEGIN {printf "%.2d", link1 * 100 / link2}')
 
 DATE=$(date +'%H:%M')
 
