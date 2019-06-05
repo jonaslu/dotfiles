@@ -17,7 +17,7 @@ LINK_QUALITY_PERCENTAGE=$(awk -v link1="${LINK_QUALITY[0]}" -v link2="${LINK_QUA
 DATE=$(date +'%H:%M')
 
 # Mixer volume | muted
-MASTER_VOLUME=$(amixer get Master | grep "Front Left: " | rg -o "\d\d%")
+MASTER_VOLUME=$(amixer get Master | grep "Front Left: " | rg -o "\d{1,2}%")
 
 CPU_USAGE=$(top -b -n 1 | perl -lane '/PID/ and $x=1; $x and print' | awk '{totuse = totuse + $9} END {printf("%.2d", totuse)}')
 
