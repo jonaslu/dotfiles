@@ -1,0 +1,10 @@
+[Unit]
+Description=Redshift for sore eyees
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/redshift
+
+[Install]
+WantedBy=sway-session.target
