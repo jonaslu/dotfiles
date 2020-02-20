@@ -12,9 +12,22 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'Yggdroot/indentLine'
 
 "" Color
-Plug 'tomasr/molokai'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
+
+set t_Co=256
+
+set background=dark
+colorscheme PaperColor
+
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default': {
+  \       'transparent_background': 1
+  \     }
+  \   }
+  \ }
 
 " Intent on
 filetype plugin indent on
@@ -55,11 +68,8 @@ set ruler
 set number
 
 let no_buffers_menu=1
-" Possibly change the airline theme to match
-colorscheme molokai
 
 set mousemodel=popup
-set t_Co=256
 
 let g:CSApprox_loaded = 1
 
