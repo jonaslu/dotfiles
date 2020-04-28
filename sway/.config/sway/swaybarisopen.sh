@@ -23,4 +23,6 @@ CPU_USAGE=$(top -b -n 1 | perl -lane '/PID/ and $x=1; $x and print' | awk '{totu
 
 MEMORY_USED=$(free -m | grep Mem: | awk '{ printf("%.2d", ($2-$7)*100/$2) }')
 
-echo 🔋$BATTERY_PERCENTAGE $CHARGE_SIGN 🔈$MASTER_VOLUME 🔆$BACKLIGHT_PERCENTAGE% 📶$NETWORK_NAME $LINK_QUALITY_PERCENTAGE% 💻 $CPU_USAGE% 💾 $MEMORY_USED% $DATE
+BLUETOOTH=$(vars=($(rfkill | grep bluetooth)); if [ ${vars[3]} = "unblocked" ]; then echo 🅱; fi)
+
+echo 🔋$BATTERY_PERCENTAGE $CHARGE_SIGN 🔈$MASTER_VOLUME 🔆$BACKLIGHT_PERCENTAGE% $BLUETOOTH 📶$NETWORK_NAME $LINK_QUALITY_PERCENTAGE% 💻 $CPU_USAGE% 💾 $MEMORY_USED% $DATE
