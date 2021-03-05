@@ -37,3 +37,5 @@ if command -v npm>/dev/null; then
 fi
 
 LESSOPEN="|/usr/bin/lesspipe.sh %s"; export LESSOPEN
+
+. <(sider completion)
