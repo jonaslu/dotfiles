@@ -16,3 +16,5 @@
     spellcheck = false
 [core]
 	excludesfile = /home/jonasl/.global_gitignore
+[commit]
+	template = /home/jonasl/.gitmessage
