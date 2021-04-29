@@ -13,7 +13,6 @@ alias rgrep='rg'
 alias vi='vim'
 alias less='less -R'
 alias use_python2="export PATH=~/bin/python2:${PATH}"
-alias jsPretty='python -m json.tool'
 alias cat="ccat"
 alias diff='diff --color'
 
