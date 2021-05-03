@@ -199,3 +199,4 @@ if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
 
+au BufRead,BufNewFile *.ain setfiletype dosini
