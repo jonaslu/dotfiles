@@ -1,20 +1,23 @@
 [user]
-    name = Jonas Lundberg
-	email = jonasl@iamjonas.me
+  name = Jonas Lundberg
+  email = jonasl@iamjonas.me
 [alias]
-    s = status
-    b = branch
-    co = checkout
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-    cb = checkout -b
-    wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
-    unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
-    powre = !"git wip;git rebase -i origin/master;git unwip"
-    ano = !"git add . && git commit --amend --no-edit"
-    tidyup = !git branch --merged HEAD | grep -v \"\\*\" | grep -v master | grep -v develop | xargs -n 1 -I % git branch -d % && git remote prune origin
+  s = status
+  b = branch
+  co = checkout
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  cb = checkout -b
+  wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
+  unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
+  powre = !"git wip;git rebase -i origin/master;git unwip"
+  ano = !"git add . && git commit --amend --no-edit"
+  tidyup = !git branch --merged HEAD | grep -v \"\\*\" | grep -v master | grep -v develop | xargs -n 1 -I % git branch -d % && git remote prune origin
 [cola]
-    spellcheck = false
+  spellcheck = false
 [core]
-	excludesfile = /home/jonasl/.global_gitignore
+  excludesfile = /home/jonasl/.global_gitignore
+  pager = delta
 [commit]
-	template = /home/jonasl/.gitmessage
+  template = /home/jonasl/.gitmessage
+[delta]
+  side-by-side=true
