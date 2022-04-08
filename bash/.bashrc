@@ -7,13 +7,12 @@
 
 alias ls='ls --color=auto'
 alias ll='ls -hal --color=auto'
-alias cdiff='ydiff -w 0 -s --wrap -t 2'
 alias grep='rg'
 alias rgrep='rg'
 alias vi='vim'
 alias less='less -R'
 alias use_python2="export PATH=~/bin/python2:${PATH}"
-alias cat="ccat"
+alias cat="bat"
 alias diff='diff --color'
 
 export PS1="\[\e[34m\]\w\[\e[m\] \[\e[32m\]\t\[\e[m\] \h\n\$ "
