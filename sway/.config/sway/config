@@ -228,7 +228,7 @@ input "*" {
   xkb_options caps:none
 }
 
-input "2:14:ETPS/2_Elantech_Touchpad" {
+input "type:touchpad" {
   tap enabled
   natural_scroll disabled
   dwt enabled
@@ -256,3 +256,5 @@ exec "systemctl --user import-environment; systemctl --user start sway-session.t
 titlebar_padding 5 1
 
 titlebar_border_thickness 1
+
+output eDP-1 scale 1.25
