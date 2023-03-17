@@ -14,6 +14,7 @@ alias less='less -R'
 alias use_python2="export PATH=~/bin/python2:${PATH}"
 alias cat="bat"
 alias diff='diff --color'
+alias pom='pomodoro.sh'
 
 export PS1="\[\e[34m\]\w\[\e[m\] \[\e[32m\]\t\[\e[m\] \h\n\$ "
 export EDITOR=vim
